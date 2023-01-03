@@ -98,78 +98,78 @@
 // Console.WriteLine();
 // FindMinRowSum(Array);
 
-int[,] CreateMatrix(int x,int y,int a)
-{
-  int[,] matrix = new int[x,y];
-  for(int i=0;i<x;i++)
-  {
-   Console.WriteLine($"Input numbers of matrix {a} row {i+1}");
-   for(int j=0;j<y;j++)
-   {
-    matrix[i,j] = int.Parse(Console.ReadLine());
-   }
-  }
-   Console.WriteLine();
-   for(int i=0;i<x;i++)   
-  {  
-   for(int j=0;j<y;j++)
-   {
-    Console.Write($"{matrix[i,j]} "); 
-   }
-   Console.WriteLine();
-  }
-  return matrix;
-}  
-int[,] ProductOfTwoMatrxs(int[,] arr1,int [,] arr2)
-{
- Console.WriteLine();
- int[,]product = new int[arr1.GetLength(0),arr2.GetLength(1)];
- for(int i=0;i<arr1.GetLength(0);i++)
- {
-  for(int j=0;j<arr2.GetLength(1);j++)
-  {
-   for(int k=0;k<arr1.GetLength(1);k++)
-   {
-    product[i,j]+=arr1[i,k]*arr2[k,j];
-   }
-   Console.Write($"{product[i,j]} ");
-  }
-   Console.WriteLine();
- }
- return product;
-}
- Console.WriteLine("Input number of matrix 1 rows");
- int m = int.Parse(Console.ReadLine());
- Console.WriteLine("Input number of matrix 1 columns equal to the number of matrix 2 rows");
- int l = int.Parse(Console.ReadLine());
- Console.WriteLine("Input number of matrix 2 columns");
- int n = int.Parse(Console.ReadLine()); 
-ProductOfTwoMatrxs(CreateMatrix(m,l,1),CreateMatrix(l,n,2));
-
-// Console.WriteLine("Enter dimension sizes of threeD array, less than 14 in sum");
-// int l = int.Parse(Console.ReadLine());
-// int m = int.Parse(Console.ReadLine());
-// int n = int.Parse(Console.ReadLine());
-// if(l+m+n<14)
+// int[,] CreateMatrix(int x,int y,int a)
 // {
-//  int[]arr=Enumerable.Range(10,11+l*m*n).ToArray();
-//  int[,,]array=new int[l,m,n];
-//  int y=0;
-//  for(int i=0;i<l;i++)
-//  {
-//   for(int j=0;j<m;j++)
+//   int[,] matrix = new int[x,y];
+//   for(int i=0;i<x;i++)
 //   {
-//    for(int k=0;k<n;k++)
-//    {    
-//      array[i,j,k]=arr[y];
-//      y++;    
-//      Console.Write($"{array[i,j,k]} ({i},{j},{k}), "); 
-//    }  
+//    Console.WriteLine($"Input numbers of matrix {a} row {i+1}");
+//    for(int j=0;j<y;j++)
+//    {
+//     matrix[i,j] = int.Parse(Console.ReadLine());
+//    }
+//   }
+//    Console.WriteLine();
+//    for(int i=0;i<x;i++)   
+//   {  
+//    for(int j=0;j<y;j++)
+//    {
+//     Console.Write($"{matrix[i,j]} "); 
+//    }
 //    Console.WriteLine();
 //   }
+//   return matrix;
+// }  
+// int[,] ProductOfTwoMatrxs(int[,] arr1,int [,] arr2)
+// {
+//  Console.WriteLine();
+//  int[,]product = new int[arr1.GetLength(0),arr2.GetLength(1)];
+//  for(int i=0;i<arr1.GetLength(0);i++)
+//  {
+//   for(int j=0;j<arr2.GetLength(1);j++)
+//   {
+//    for(int k=0;k<arr1.GetLength(1);k++)
+//    {
+//     product[i,j]+=arr1[i,k]*arr2[k,j];
+//    }
+//    Console.Write($"{product[i,j]} ");
+//   }
+//    Console.WriteLine();
 //  }
+//  return product;
 // }
-// else Console.WriteLine("Sum of dimensions is not less than 14");
+//  Console.WriteLine("Input number of matrix 1 rows");
+//  int m = int.Parse(Console.ReadLine());
+//  Console.WriteLine("Input number of matrix 1 columns equal to the number of matrix 2 rows");
+//  int l = int.Parse(Console.ReadLine());
+//  Console.WriteLine("Input number of matrix 2 columns");
+//  int n = int.Parse(Console.ReadLine()); 
+// ProductOfTwoMatrxs(CreateMatrix(m,l,1),CreateMatrix(l,n,2));
+
+Console.WriteLine("Enter dimension sizes of threeD array, less than 14 in sum");
+int l = int.Parse(Console.ReadLine());
+int m = int.Parse(Console.ReadLine());
+int n = int.Parse(Console.ReadLine());
+if(l+m+n<14)
+{
+ int[]arr=Enumerable.Range(10,11+l*m*n).ToArray();
+ int[,,]array=new int[l,m,n];
+ int y=0;
+ for(int i=0;i<l;i++)
+ {
+  for(int j=0;j<m;j++)
+  {
+   for(int k=0;k<n;k++)
+   {    
+     array[i,j,k]=arr[y];
+     y++;    
+     Console.Write($"{array[i,j,k]} ({i},{j},{k}), "); 
+   }  
+   Console.WriteLine();
+  }
+ }
+}
+ else Console.WriteLine("Sum of dimensions is not less than 14");
 
 // int n=4;
 // int[,]matrix=new int[n,n];
