@@ -48,103 +48,103 @@
 // Console.WriteLine();
 // UpdateArray(Array);
 
-int ReadInt()
-{
-  Console.WriteLine("Input row/column numbers");
- int m = int.Parse(Console.ReadLine());
- return m;
-}
-int [,] MakeFillArray(int Length1, int Length2)
-{
-  int[,] arr = new int[Length1, Length2];
-  for(int i = 0; i < Length1; i++)
-  {
-    for(int j = 0; j < Length2; j++)
-    arr[i, j] = new Random().Next(-100,101);
-  }
-  return arr;
-}
-void PrintArray(int[,] Arr)
-{
-  for(int i = 0; i < Arr.GetLength(0); i++)
- {
-  for(int j = 0; j < Arr.GetLength(1); j++)      
-  Console.Write($"{Arr[i,j]} ");
-  Console.WriteLine();
- }
-}
-void FindMinRowSum(int [,] Arr)
-{
- int[] row = new int[Arr.GetLength(0)];
- int Min = row[0];
- int MinIndex = 0;
- for(int i = 0; i < Arr.GetLength(0); i++)
- {
-  int Sum =0;
-  for(int j = 0; j < Arr.GetLength(1); j++)
-  {
-   row[i] = Sum+=Arr[i, j];
-  }
-   if(row[i] < Min)
-  {
-   Min = row[i];
-   MinIndex = i;
-  }
- }
- Console.Write($"Min sum cells row from top  is {MinIndex+1} ");
-}     
-int[,] Array = MakeFillArray(ReadInt(),ReadInt());
-PrintArray(Array);
-Console.WriteLine();
-FindMinRowSum(Array);
-
-// int[,] CreateMatrix(int x,int y,int a)
+// int ReadInt()
 // {
-//   int[,] matrix = new int[x,y];
-//   for(int i=0;i<x;i++)
-//   {
-//    Console.WriteLine($"Input numbers of matrix {a} row {i+1}");
-//    for(int j=0;j<y;j++)
-//    {
-//     matrix[i,j] = int.Parse(Console.ReadLine());
-//    }
-//   }
-//    Console.WriteLine();
-//    for(int i=0;i<x;i++)   
-//   {  
-//    for(int j=0;j<y;j++)
-//    {
-//     Console.Write($"{matrix[i,j]} "); 
-//    }
-//    Console.WriteLine();
-//   }
-//   return matrix;
-// }  
-// int[,] ProductOfTwoMatrxs(int[,] arr1,int [,] arr2)
-// {
-//  Console.WriteLine();
-//  int[,]product = new int[arr1.GetLength(0),arr2.GetLength(1)];
-//  for(int i=0;i<arr1.GetLength(0);i++)
-//  {
-//   for(int j=0;j<arr2.GetLength(1);j++)
-//   {
-//    for(int k=0;k<arr1.GetLength(1);k++)
-//    {
-//     product[i,j]+=arr1[i,k]*arr2[k,j];
-//    }
-//    Console.Write($"{product[i,j]} ");
-//   }
-//    Console.WriteLine();
-//  }
-//  return product;
-// }
-//  Console.WriteLine("Input number of matrix 1 rows");
+//   Console.WriteLine("Input row/column numbers");
 //  int m = int.Parse(Console.ReadLine());
-//  Console.WriteLine("Input number of matrix 1 columns equal to the number of matrix 2 rows");
-//  int l = int.Parse(Console.ReadLine());
-//  Console.WriteLine("Input number of matrix 2 columns");
-//  int n = int.Parse(Console.ReadLine()); 
-// ProductOfTwoMatrxs(CreateMatrix(m,l,1),CreateMatrix(l,n,2));
+//  return m;
+// }
+// int [,] MakeFillArray(int Length1, int Length2)
+// {
+//   int[,] arr = new int[Length1, Length2];
+//   for(int i = 0; i < Length1; i++)
+//   {
+//     for(int j = 0; j < Length2; j++)
+//     arr[i, j] = new Random().Next(-100,101);
+//   }
+//   return arr;
+// }
+// void PrintArray(int[,] Arr)
+// {
+//   for(int i = 0; i < Arr.GetLength(0); i++)
+//  {
+//   for(int j = 0; j < Arr.GetLength(1); j++)      
+//   Console.Write($"{Arr[i,j]} ");
+//   Console.WriteLine();
+//  }
+// }
+// void FindMinRowSum(int [,] Arr)
+// {
+//  int[] row = new int[Arr.GetLength(0)];
+//  int Min = row[0];
+//  int MinIndex = 0;
+//  for(int i = 0; i < Arr.GetLength(0); i++)
+//  {
+//   int Sum =0;
+//   for(int j = 0; j < Arr.GetLength(1); j++)
+//   {
+//    row[i] = Sum+=Arr[i, j];
+//   }
+//    if(row[i] < Min)
+//   {
+//    Min = row[i];
+//    MinIndex = i;
+//   }
+//  }
+//  Console.Write($"Min sum cells row from top  is {MinIndex+1} ");
+// }     
+// int[,] Array = MakeFillArray(ReadInt(),ReadInt());
+// PrintArray(Array);
+// Console.WriteLine();
+// FindMinRowSum(Array);
+
+int[,] CreateMatrix(int x,int y,int a)
+{
+  int[,] matrix = new int[x,y];
+  for(int i=0;i<x;i++)
+  {
+   Console.WriteLine($"Input numbers of matrix {a} row {i+1}");
+   for(int j=0;j<y;j++)
+   {
+    matrix[i,j] = int.Parse(Console.ReadLine());
+   }
+  }
+   Console.WriteLine();
+   for(int i=0;i<x;i++)   
+  {  
+   for(int j=0;j<y;j++)
+   {
+    Console.Write($"{matrix[i,j]} "); 
+   }
+   Console.WriteLine();
+  }
+  return matrix;
+}  
+int[,] ProductOfTwoMatrxs(int[,] arr1,int [,] arr2)
+{
+ Console.WriteLine();
+ int[,]product = new int[arr1.GetLength(0),arr2.GetLength(1)];
+ for(int i=0;i<arr1.GetLength(0);i++)
+ {
+  for(int j=0;j<arr2.GetLength(1);j++)
+  {
+   for(int k=0;k<arr1.GetLength(1);k++)
+   {
+    product[i,j]+=arr1[i,k]*arr2[k,j];
+   }
+   Console.Write($"{product[i,j]} ");
+  }
+   Console.WriteLine();
+ }
+ return product;
+}
+ Console.WriteLine("Input number of matrix 1 rows");
+ int m = int.Parse(Console.ReadLine());
+ Console.WriteLine("Input number of matrix 1 columns equal to the number of matrix 2 rows");
+ int l = int.Parse(Console.ReadLine());
+ Console.WriteLine("Input number of matrix 2 columns");
+ int n = int.Parse(Console.ReadLine()); 
+ProductOfTwoMatrxs(CreateMatrix(m,l,1),CreateMatrix(l,n,2));
 
 // Console.WriteLine("Enter dimension sizes of threeD array, less than 14 in sum");
 // int l = int.Parse(Console.ReadLine());
