@@ -171,44 +171,44 @@
 // }
 //  else Console.WriteLine("Sum of dimensions is not less than 14");
 
-int n=4;
-int[,]matrix=new int[n,n];
-  int row=0;  
-  int col=0;
-  matrix[row,col]=1; 
-  for(int i=0;i<n;i++)
-  {
-   matrix[i,0]=i+1;
-  } 
-  for(int i=0;i<n;i++)
-  {
-   matrix[n-1,i]=matrix[n-1,0]+i;
-  } 
-  for(int i=n-2;i>=0;i--)
-  {
-   matrix[i,n-1]=matrix[n-1,n-1]+n-1-i; 
-  }
-  for(int i=n-2;i>0;i--)
-  {
-   matrix[0,i]=matrix[n-1,0]+(n-1)*(n-1)-i;  
-  }
-  for(int i=1;i<n-1;i++)
-  {
-   matrix[i,1]=matrix[0,1]+i; 
-  }
-  for(int i=2;i<n-1;i++)
-  {
-   matrix[n-2,i]=matrix[n-2,i-1]+1; 
-  }
-  for(int i=n-3;i>0;i--)
-  {
-   matrix[i,n-2]=matrix[n-2,i+1]+1; 
-  }
- for(int j=0;j<n;j++)
- {
-  for(int i=0;i<n;i++)
-  {
-   Console.Write($"{matrix[i,j].ToString("D2")}  ");
-  }
-  Console.WriteLine();
- }
+// int n=4;
+// int[,]matrix=new int[n,n];
+//   int row=0;  
+//   int col=0;
+//   matrix[row,col]=1; 
+//   for(int i=0;i<n;i++)
+//   {
+//    matrix[i,0]=i+1;
+//   } 
+//   for(int i=0;i<n;i++)
+//   {
+//    matrix[n-1,i]=matrix[n-1,0]+i;
+//   } 
+//   for(int i=n-2;i>=0;i--)
+//   {
+//    matrix[i,n-1]=matrix[n-1,n-1]+n-1-i; 
+//   }
+//   for(int i=n-2;i>0;i--)
+//   {
+//    matrix[0,i]=matrix[n-1,0]+(n-1)*(n-1)-i;  
+//   }
+//   for(int i=1;i<n-1;i++)
+//   {
+//    matrix[i,1]=matrix[0,1]+i; 
+//   }
+//   for(int i=2;i<n-1;i++)
+//   {
+//    matrix[n-2,i]=matrix[n-2,i-1]+1; 
+//   }
+//   for(int i=n-3;i>0;i--)
+//   {
+//    matrix[i,n-2]=matrix[n-2,i+1]+1; 
+//   }
+//  for(int j=0;j<n;j++)
+//  {
+//   for(int i=0;i<n;i++)
+//   {
+//    Console.Write($"{matrix[i,j].ToString("D2")}  ");
+//   }
+//   Console.WriteLine();
+//  }
